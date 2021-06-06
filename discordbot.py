@@ -1,9 +1,6 @@
 # インストールした discord.py を読み込む
 import discord
 
-# 自分のBotのアクセストークンに置き換えてください
-TOKEN = 'ODQzMzQ1Mjk1MzUzMDUzMTg1.YKCggw.8wzkVY9QHIvdZhm8LZOVQf7CMVg'
-
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
 
@@ -46,5 +43,3 @@ async def on_message(message):
     #コマンド「/live ?」と入力したら不定期配信予告が返る処理(何かしらアクシデントがあった場合)
     if message.content == '/live ?':
         await message.channel.send('@everyone もうすぐで配信です！ https://www.mildom.com/profile/11053439')
-
-client.run(TOKEN)
